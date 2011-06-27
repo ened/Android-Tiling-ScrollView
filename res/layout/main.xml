@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tiled="http://schemas.android.com/apk/res/asia.ivity.android.tiledscrollview"
               android:orientation="vertical"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
@@ -9,6 +11,10 @@
             android:fadingEdge="none"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
+            tiled:tileWidth="90"
+            tiled:tileHeight="90"
+            tiled:imageWidth="1520"
+            tiled:imageHeight="1500"
             />
 </LinearLayout>
 
