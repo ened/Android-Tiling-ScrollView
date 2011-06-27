@@ -1,0 +1,15 @@
+# Android generated folders
+gen/
+checkstyle-result.xml
+local.properties
+bin/
+.project
+.classpath
+.idea
+out
+*.apk
+build.xml.bak
+.DS_Store
+/com.lg.elearning.android.ipr
+/com.lg.elearning.android.iws
+*.iml
