@@ -10,6 +10,6 @@ out
 *.apk
 build.xml.bak
 .DS_Store
-/com.lg.elearning.android.ipr
-/com.lg.elearning.android.iws
+/asia.ivity.android.tiledscrollview.ipr
+/asia.ivity.android.tiledscrollview.iws
 *.iml
