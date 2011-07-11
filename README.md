@@ -6,11 +6,13 @@ This android widget aims to provide a scalable way to show large images (like Me
 The source image will be provided in TILES, so that all tiles combined create the full scale image.
 
 Current features:
+
 * Specify a image pattern to find the tiles
 * Freely navigate through the image using a two dimensional scroll view
 * Load required tiles on demand and non-blocking
 
 Planned features:
+
 * Zoom levels using multiple levels of tiles
 * Panning, Pinching etc (multitouch gestures)
 * A way to overlay icons or other widgets at fix points (similar to Google Maps), which should be useful for annotations
@@ -30,6 +32,7 @@ Example
             />
 ```
 Attributes:
+
 * file_pattern - specifies the pattern to find the files. Placeholders %col% and %row% are mandatory
 * tile_height & tile_width - specify the tile dimensions. The widget should be able to handle non-fitting (i.e. if the last tile is smaller then others tiles well)
 * image_height & image_width - image dimensions to support abovementioned functions.
