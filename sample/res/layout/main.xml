@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res/asia.ivity.android.tiledscrollview"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+        >
+
+    <asia.ivity.android.tiledscrollview.TiledScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            app:file_pattern="tiger/crop_%col%_%row%.jpg"
+            app:tile_height="90"
+            app:tile_width="90"
+            app:image_width="1280"
+            app:image_height="1024"
+            />
+
+</LinearLayout>
+
