@@ -28,8 +28,10 @@ import android.os.AsyncTask;
 import android.os.Handler;
 import android.os.Message;
 import android.util.AttributeSet;
+import android.util.FloatMath;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.MotionEvent;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
@@ -38,6 +40,7 @@ import android.widget.ImageView;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.ref.SoftReference;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 import java.util.concurrent.ConcurrentHashMap;
@@ -54,9 +57,57 @@ public class TiledScrollView extends TwoDScrollView {
 
     private Animation mFadeInAnimation;
 
+    public enum ZoomLevel {
+        DEFAULT,
+        LEVEL_1,
+        LEVEL_2;
+
+        public ZoomLevel nextLevel() {
+            switch (this) {
+                case DEFAULT:
+                    return LEVEL_1;
+                case LEVEL_1:
+                    return LEVEL_2;
+                case LEVEL_2:
+                    return LEVEL_2;
+            }
+
+            return this;
+        }
+
+        public ZoomLevel previousLevel() {
+            switch (this) {
+                case DEFAULT:
+                    return DEFAULT;
+                case LEVEL_1:
+                    return DEFAULT;
+                case LEVEL_2:
+                    return LEVEL_1;
+            }
+
+            return this;
+        }
+    }
+
+    ZoomLevel mCurrentZoomLevel = ZoomLevel.DEFAULT;
+
+    Map<ZoomLevel, ConfigurationSet> mConfigurationSets = new HashMap<ZoomLevel, ConfigurationSet>();
+
+    private ConfigurationSet getCurrentConfigurationSet() {
+        if (mConfigurationSets.containsKey(mCurrentZoomLevel)) {
+            return mConfigurationSets.get(mCurrentZoomLevel);
+        }
+
+        return mConfigurationSets.get(ZoomLevel.DEFAULT);
+    }
+
+    public void addConfigurationSet(ZoomLevel level, ConfigurationSet set) {
+        mConfigurationSets.put(level, set);
+    }
+
     private FrameLayout mContainer;
     private static final String TAG = TiledScrollView.class.getSimpleName();
-    private float mDensity;
+//    private float mDensity;
     private Handler mHandler = new Handler() {
         @Override
         public void handleMessage(final Message msg) {
@@ -78,12 +129,6 @@ public class TiledScrollView extends TwoDScrollView {
 
     private Map<Tile, SoftReference<ImageView>> tiles = new ConcurrentHashMap<Tile, SoftReference<ImageView>>();
 
-    private int mImageWidth;
-    private int mImageHeight;
-    private int mTileWidth;
-    private int mTileHeight;
-    private String mFilePattern;
-
     public TiledScrollView(Context context, AttributeSet attrs) {
         super(context, attrs);
 
@@ -104,34 +149,40 @@ public class TiledScrollView extends TwoDScrollView {
         final TypedArray a = getContext().obtainStyledAttributes(attrs,
                 R.styleable.asia_ivity_android_tiledscrollview_TiledScrollView);
 
-        mImageWidth = a.getInt(R.styleable.asia_ivity_android_tiledscrollview_TiledScrollView_image_width, -1);
-        mImageHeight = a.getInt(R.styleable.asia_ivity_android_tiledscrollview_TiledScrollView_image_height, -1);
-        mTileWidth = a.getInt(R.styleable.asia_ivity_android_tiledscrollview_TiledScrollView_tile_width, -1);
-        mTileHeight = a.getInt(R.styleable.asia_ivity_android_tiledscrollview_TiledScrollView_tile_height, -1);
-        mFilePattern = a.getString(R.styleable.asia_ivity_android_tiledscrollview_TiledScrollView_file_pattern);
+        int imageWidth = a.getInt(R.styleable.asia_ivity_android_tiledscrollview_TiledScrollView_image_width, -1);
+        int imageHeight = a.getInt(R.styleable.asia_ivity_android_tiledscrollview_TiledScrollView_image_height, -1);
+        int tileWidth = a.getInt(R.styleable.asia_ivity_android_tiledscrollview_TiledScrollView_tile_width, -1);
+        int tileHeight = a.getInt(R.styleable.asia_ivity_android_tiledscrollview_TiledScrollView_tile_height, -1);
+        String filePattern = a.getString(R.styleable.asia_ivity_android_tiledscrollview_TiledScrollView_file_pattern);
 
-        if (mImageWidth == -1 || mImageHeight == -1 || mTileWidth == -1 || mTileHeight == -1 || mFilePattern == null) {
+        // TODO: Move Validation to ConfigurationSet itself.
+        if (imageWidth == -1 || imageHeight == -1 || tileWidth == -1 || tileHeight == -1 || filePattern == null) {
             throw new IllegalArgumentException("Please set all attributes correctly!");
         }
+
+        mConfigurationSets.put(ZoomLevel.DEFAULT,
+                new ConfigurationSet(filePattern, tileWidth, tileHeight, imageWidth, imageHeight));
     }
 
     private void init() {
         mFadeInAnimation = AnimationUtils.loadAnimation(getContext(), R.anim.fadein);
 
-        mContainer = new FrameLayout(getContext());
+        mContainer = new ZoomingFrameLayout(getContext());
 
-        final LayoutParams lp = new LayoutParams(mImageWidth, mImageHeight);
+        ConfigurationSet set = getCurrentConfigurationSet();
+
+        final LayoutParams lp = new LayoutParams(set.getImageWidth(), set.getImageHeight());
 
         // Required?
-        mContainer.setMinimumWidth(mImageWidth);
-        mContainer.setMinimumHeight(mImageHeight);
+        mContainer.setMinimumWidth(set.getImageWidth());
+        mContainer.setMinimumHeight(set.getImageHeight());
         mContainer.setLayoutParams(lp);
 
         addView(mContainer, lp);
 
         mContainer.setBackgroundColor(android.R.color.white);
-
-        mDensity = getContext().getResources().getDisplayMetrics().density;
+//
+//        mDensity = getContext().getResources().getDisplayMetrics().density;
     }
 
     @Override
@@ -166,24 +217,26 @@ public class TiledScrollView extends TwoDScrollView {
         final int left = visible.left + getScrollX();
         final int top = visible.top + getScrollY();
 
+        final ConfigurationSet set = getCurrentConfigurationSet();
+
         // Update the logic here. Sometimes, we don't need to add 1 tile to the right and bottom,
         // as it might be already exact. In that case, it's loading tiles that will be cleaned up
         // immediately in #cleanupTiles().
-        final int width = (int) (getMeasuredWidth()) + getScrollX() + mTileWidth;
-        final int height = (int) (getMeasuredHeight()) + getScrollY() + mTileHeight;
+        final int width = (int) (getMeasuredWidth()) + getScrollX() + set.getTileWidth();
+        final int height = (int) (getMeasuredHeight()) + getScrollY() + set.getTileHeight();
 
-        Log.d(TAG, "Top    : " + top);
-        Log.d(TAG, "Left   : " + left);
-        Log.d(TAG, "Width  : " + width);
-        Log.d(TAG, "Height : " + height);
-
+//        Log.d(TAG, "Top    : " + top);
+//        Log.d(TAG, "Left   : " + left);
+//        Log.d(TAG, "Width  : " + width);
+//        Log.d(TAG, "Height : " + height);
+//
         new AsyncTask<Void, ImageView, Void>() {
             @Override
             protected Void doInBackground(Void... params) {
                 for (int y = top; y < height; ) {
-                    final int tileY = new Double(Math.ceil(y / mTileHeight)).intValue();
+                    final int tileY = new Double(Math.ceil(y / set.getTileHeight())).intValue();
                     for (int x = left; x < width; ) {
-                        final int tileX = new Double(Math.ceil(x / mTileWidth)).intValue();
+                        final int tileX = new Double(Math.ceil(x / set.getTileWidth())).intValue();
 
                         final Tile tile = new Tile(tileX, tileY);
 
@@ -196,9 +249,9 @@ public class TiledScrollView extends TwoDScrollView {
                         } else {
                         }
 
-                        x = x + mTileWidth;
+                        x = x + set.getTileWidth();
                     }
-                    y = y + mTileHeight;
+                    y = y + set.getTileHeight();
                 }
 
                 return null;
@@ -217,8 +270,8 @@ public class TiledScrollView extends TwoDScrollView {
                     FrameLayout.LayoutParams lp2 = new FrameLayout.LayoutParams(
                             LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
 
-                    lp2.leftMargin = tile.x * mTileWidth;
-                    lp2.topMargin = tile.y * mTileHeight;
+                    lp2.leftMargin = tile.x * set.getTileWidth();
+                    lp2.topMargin = tile.y * set.getTileHeight();
                     lp2.gravity = Gravity.TOP | Gravity.LEFT;
                     iv.setLayoutParams(lp2);
 
@@ -237,8 +290,10 @@ public class TiledScrollView extends TwoDScrollView {
     private ImageView getNewTile(Tile tile) throws IOException {
         ImageView iv = new ImageView(getContext());
 
+        ConfigurationSet set = getCurrentConfigurationSet();
+
         InputStream is;
-        String path = mFilePattern.replace("%col%", new Integer(tile.y).toString())
+        String path = set.getFilePattern().replace("%col%", new Integer(tile.y).toString())
                 .replace("%row%", new Integer(tile.x).toString());
         try {
             is = getResources().getAssets().open(path);
@@ -279,42 +334,106 @@ public class TiledScrollView extends TwoDScrollView {
         }
     }
 
-    /** Simple tile coordinates (X, Y). */
-    private class Tile {
-        public Tile(int x_, int y_) {
-            x = x_;
-            y = y_;
+    private boolean inZoomMode = false;
+    private boolean ignoreLastFinger = false;
+    private float mOrigSeparation;
+    private static final float ZOOMJUMP = 75f;
+
+    @Override
+    public boolean onTouchEvent(MotionEvent e) {
+        int action = e.getAction() & MotionEvent.ACTION_MASK;
+        if (e.getPointerCount() == 2) {
+            inZoomMode = true;
+        } else {
+            inZoomMode = false;
         }
+        if (inZoomMode) {
+            switch (action) {
+                case MotionEvent.ACTION_POINTER_DOWN:
+                    // We may be starting a new pinch so get ready
+                    mOrigSeparation = calculateSeparation(e);
+                    break;
+                case MotionEvent.ACTION_POINTER_UP:
+                    // We're ending a pinch so prepare to
+                    // ignore the last finger while it's the
+                    // only one still down.
+                    ignoreLastFinger = true;
+                    break;
+                case MotionEvent.ACTION_MOVE:
+                    // We're in a pinch so decide if we need to change
+                    // the zoom level.
+                    float newSeparation = calculateSeparation(e);
+                    ZoomLevel next = mCurrentZoomLevel;
+                    if (newSeparation - mOrigSeparation > ZOOMJUMP) {
+                        Log.d(TAG, "Zoom In!");
 
-        int x;
-        int y;
+                        next = mCurrentZoomLevel.nextLevel();
+                        mOrigSeparation = newSeparation;
+                    } else if (mOrigSeparation - newSeparation > ZOOMJUMP) {
+                        Log.d(TAG, "Zoom Out!");
 
-        @Override
-        public String toString() {
-            return "Tile{" +
-                    "x=" + x +
-                    ", y=" + y +
-                    '}';
+                        next = mCurrentZoomLevel.previousLevel();
+                        mOrigSeparation = newSeparation;
+                    }
+
+                    if(next != mCurrentZoomLevel && mConfigurationSets.containsKey(next)) {
+                        mCurrentZoomLevel = next;
+                        Log.d(TAG, "new zoom level: " + mCurrentZoomLevel);
+
+                        tiles.clear();
+
+                        double x = getScrollX();
+                        double y = getScrollY();
+                        double w = mContainer.getWidth();
+                        double h = mContainer.getHeight();
+
+                        removeAllViews();
+
+                        init();
+
+                        double newW = getCurrentConfigurationSet().getImageWidth();
+                        double newH = getCurrentConfigurationSet().getImageHeight();
+
+                        Log.d(TAG, "1: " + x + ", " + y);
+                        Log.d(TAG, "2: " + w + ", " + h);
+                        Log.d(TAG, "3: " + newW + ", " + newH);
+
+                        Log.d(TAG, "new sX: " + (int) x/w*newW);
+                        Log.d(TAG, "new sY: " + (int) y/h*newH);
+
+                        smoothScrollTo((int) (x / w * newW), (int) (y/h*newH));
+
+
+//                        scrollTo(x/w*newW, y/h*newH);
+
+                        try {
+                            fillTiles();
+                        } catch (IOException e1) {
+                            Log.e(TAG, "Problem loading new tiles.", e1);
+                        }
+                    }
+
+                    break;
+            }
+            // Don't pass these events to Android because we're
+            // taking care of them.
+            return true;
+        } else {
+            // cleanup if necessary from zooming logic
         }
-
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-
-            Tile tile = (Tile) o;
-
-            if (x != tile.x) return false;
-            if (y != tile.y) return false;
-
+        // Throw away events if we're on the last finger
+        // until the last finger goes up.
+        if (ignoreLastFinger) {
+            if (action == MotionEvent.ACTION_UP)
+                ignoreLastFinger = false;
             return true;
         }
+        return super.onTouchEvent(e);
+    }
 
-        @Override
-        public int hashCode() {
-            int result = x;
-            result = 31 * result + y;
-            return result;
-        }
+    private float calculateSeparation(MotionEvent e) {
+        float x = e.getX(0) - e.getX(1);
+        float y = e.getY(0) - e.getY(1);
+        return FloatMath.sqrt(x * x + y * y);
     }
 }
