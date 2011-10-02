@@ -442,7 +442,7 @@ public class TwoDScrollView extends FrameLayout {
         long duration = AnimationUtils.currentAnimationTimeMillis() - mLastScroll;
         if (duration > ANIMATED_SCROLL_GAP) {
             mScroller.startScroll(getScrollX(), getScrollY(), dx, dy);
-            //awakenScrollBars(mScroller.getDuration());
+            awakenScrollBars(mScroller.getDuration());
             invalidate();
         } else {
             if (!mScroller.isFinished()) {
@@ -564,7 +564,7 @@ public class TwoDScrollView extends FrameLayout {
     
             mScroller.fling(getScrollX(), getScrollY(), velocityX, velocityY, 0, right - width, 0, bottom - height);
     
-            //awakenScrollBars(mScroller.getDuration());
+            awakenScrollBars(mScroller.getDuration());
             invalidate();
         }
     }

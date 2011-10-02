@@ -21,6 +21,7 @@ package asia.ivity.android.tiledscrollview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Rect;
 import android.os.AsyncTask;
@@ -36,7 +37,7 @@ import android.widget.ImageView;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.lang.ref.WeakReference;
+import java.lang.ref.SoftReference;
 import java.util.Map;
 import java.util.Random;
 import java.util.concurrent.ConcurrentHashMap;
@@ -69,14 +70,13 @@ public class TiledScrollView extends TwoDScrollView {
                     mHandler.sendMessageDelayed(Message.obtain(mHandler, CLEANUP_OLD_TILES), 1000);
                     break;
                 case CLEANUP_OLD_TILES:
-                    Log.d(TAG, "Cleanup!");
                     cleanupOldTiles();
                     break;
             }
         }
     };
 
-    private Map<Tile, WeakReference<ImageView>> tiles = new ConcurrentHashMap<Tile, WeakReference<ImageView>>();
+    private Map<Tile, SoftReference<ImageView>> tiles = new ConcurrentHashMap<Tile, SoftReference<ImageView>>();
 
     private int mImageWidth;
     private int mImageHeight;
@@ -165,8 +165,12 @@ public class TiledScrollView extends TwoDScrollView {
 
         final int left = visible.left + getScrollX();
         final int top = visible.top + getScrollY();
-        final int width = (int) (getMeasuredWidth() * mDensity) + getScrollX();
-        final int height = (int) (getMeasuredHeight() * mDensity) + getScrollY();
+
+        // Update the logic here. Sometimes, we don't need to add 1 tile to the right and bottom,
+        // as it might be already exact. In that case, it's loading tiles that will be cleaned up
+        // immediately in #cleanupTiles().
+        final int width = (int) (getMeasuredWidth()) + getScrollX() + mTileWidth;
+        final int height = (int) (getMeasuredHeight()) + getScrollY() + mTileHeight;
 
         Log.d(TAG, "Top    : " + top);
         Log.d(TAG, "Left   : " + left);
@@ -189,6 +193,7 @@ public class TiledScrollView extends TwoDScrollView {
                             } catch (IOException e) {
                                 // Do nothing.
                             }
+                        } else {
                         }
 
                         x = x + mTileWidth;
@@ -202,30 +207,31 @@ public class TiledScrollView extends TwoDScrollView {
             @Override
             protected void onProgressUpdate(ImageView... ivs) {
                 for (ImageView iv : ivs) {
-                    if (iv != null) {
-                        final Tile tile = (Tile) iv.getTag();
-
-                        iv.setId(new Random().nextInt());
-                        FrameLayout.LayoutParams lp2 = new FrameLayout.LayoutParams(mTileWidth, mTileHeight);
-
-
-                        lp2.leftMargin = tile.x * mTileWidth;
-                        lp2.topMargin = tile.y * mTileHeight;
-                        lp2.gravity = Gravity.TOP | Gravity.LEFT;
-                        iv.setLayoutParams(lp2);
-
-                        mContainer.addView(iv, lp2);
-                        tiles.put(tile, new WeakReference<ImageView>(iv));
+                    if (iv == null) {
+                        continue;
                     }
+
+                    final Tile tile = (Tile) iv.getTag();
+
+                    iv.setId(new Random().nextInt());
+                    FrameLayout.LayoutParams lp2 = new FrameLayout.LayoutParams(
+                            LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+
+                    lp2.leftMargin = tile.x * mTileWidth;
+                    lp2.topMargin = tile.y * mTileHeight;
+                    lp2.gravity = Gravity.TOP | Gravity.LEFT;
+                    iv.setLayoutParams(lp2);
+
+                    mContainer.addView(iv, lp2);
+
+                    // Not yet functional.
+                    // Log.d(TAG, "Animating: " + tile);
+                    // iv.startAnimation(mFadeInAnimation);
+
+                    tiles.put(tile, new SoftReference<ImageView>(iv));
                 }
             }
         }.execute((Void[]) null);
-
-//                Message msg = Message.obtain();
-//                msg.what = 111;
-//                msg.arg1 = iv.getId();
-
-//                mHandler.sendMessage(msg);
     }
 
     private ImageView getNewTile(Tile tile) throws IOException {
@@ -236,14 +242,16 @@ public class TiledScrollView extends TwoDScrollView {
                 .replace("%row%", new Integer(tile.x).toString());
         try {
             is = getResources().getAssets().open(path);
-            iv.setImageBitmap(BitmapFactory.decodeStream(is));
+            Bitmap bm = BitmapFactory.decodeStream(is);
+            iv.setImageBitmap(bm);
+            iv.setMinimumWidth(bm.getWidth());
+            iv.setMinimumHeight(bm.getHeight());
+            iv.setMaxWidth(bm.getWidth());
+            iv.setMaxHeight(bm.getHeight());
+            is.close();
         } catch (IOException e) {
             throw new IOException("Cannot open asset at:" + path);
         }
-
-        // Required?
-        iv.setMinimumHeight(mTileHeight);
-        iv.setMinimumWidth(mTileWidth);
 
         iv.setTag(tile);
 
@@ -251,32 +259,62 @@ public class TiledScrollView extends TwoDScrollView {
     }
 
     private void cleanupOldTiles() {
+        Log.d(TAG, "Cleanup old tiles");
+
+        Rect actualRect = new Rect(
+                getScrollX(), getScrollY(),
+                getWidth() + getScrollX(),
+                getHeight() + getScrollY()
+        );
+
         for (Tile tile : tiles.keySet()) {
-            ImageView v = tiles.get(tile).get();
+            final ImageView v = tiles.get(tile).get();
             Rect r = new Rect();
-
             v.getHitRect(r);
-
-            Rect actualRect = new Rect(
-                    getScrollX(), getScrollY(),
-                    getWidth() + getScrollX(),
-                    getHeight() + getScrollY()
-            );
 
             if (!Rect.intersects(actualRect, r)) {
                 mContainer.removeView(v);
+                tiles.remove(tile);
             }
-            tiles.remove(tile);
         }
     }
 
     /** Simple tile coordinates (X, Y). */
     private class Tile {
         public Tile(int x_, int y_) {
-            x= x_;
+            x = x_;
             y = y_;
         }
+
         int x;
         int y;
+
+        @Override
+        public String toString() {
+            return "Tile{" +
+                    "x=" + x +
+                    ", y=" + y +
+                    '}';
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+
+            Tile tile = (Tile) o;
+
+            if (x != tile.x) return false;
+            if (y != tile.y) return false;
+
+            return true;
+        }
+
+        @Override
+        public int hashCode() {
+            int result = x;
+            result = 31 * result + y;
+            return result;
+        }
     }
 }
