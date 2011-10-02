@@ -20,16 +20,16 @@ Planned features:
 Example
 =======
 ``` xml
-    <asia.ivity.android.tiledscrollview.TiledScrollView
-            android:id="@+id/map"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            app:file_pattern="clifford_layout_highres/CROP_%col%_%row%.jpg"
-            app:tile_height="120"
-            app:tile_width="120"
-            app:image_width="3008"
-            app:image_height="2136"
-            />
+<asia.ivity.android.tiledscrollview.TiledScrollView
+    android:id="@+id/map"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    app:file_pattern="clifford_layout_highres/CROP_%col%_%row%.jpg"
+    app:tile_height="120"
+    app:tile_width="120"
+    app:image_width="3008"
+    app:image_height="2136"
+    />
 ```
 Attributes:
 
@@ -38,6 +38,21 @@ Attributes:
 * image_height & image_width - image dimensions to support abovementioned functions.
 
 The attributes are very likely to be reduced and cut. I prefer the widget to be more simple in the long term.
+
+Multiple Zoom Levels
+====================
+
+The View supports different zoom levels. You can add them using Java.
+
+``` java
+TiledScrollView view = (TiledScrollView) findViewById(R.id.map);
+
+view.addConfigurationSet(TiledScrollView.ZoomLevel.LEVEL_1, new ConfigurationSet(
+    "clifford_layout_level1/crop_%col%_%row%.png", 120, 120, 2100, 1491));
+
+view.addConfigurationSet(TiledScrollView.ZoomLevel.LEVEL_2, new ConfigurationSet(
+    "clifford_layout_level2/CROP_%col%_%row%.jpg", 120, 120, 3008, 2136));
+```
 
 Credits
 =======
