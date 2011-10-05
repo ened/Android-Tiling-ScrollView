@@ -33,6 +33,4 @@ public class ZoomingFrameLayout extends FrameLayout {
 
         canvas.restore();
     }
-
-
 }

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+    <ImageButton
+            android:id="@+id/btn_zoom_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_zoom_down"
+            android:background="@android:color/transparent"
+            />
+    <ImageButton
+            android:id="@+id/btn_zoom_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_zoom_up"
+            android:background="@android:color/transparent"
+            />
+</LinearLayout>
