@@ -75,8 +75,15 @@ public class TiledScrollView extends FrameLayout {
     }
 
     private void updateZoomButtons() {
-        mBtnZoomDown.setEnabled(mScrollView.canZoomFurtherDown());
-        mBtnZoomUp.setEnabled(mScrollView.canZoomFurtherUp());
+        if (!mScrollView.canZoomFurtherDown() && !mScrollView.canZoomFurtherUp()) {
+            mBtnZoomDown.setVisibility(GONE);
+            mBtnZoomUp.setVisibility(GONE);
+        } else {
+            mBtnZoomDown.setVisibility(VISIBLE);
+            mBtnZoomUp.setVisibility(VISIBLE);
+            mBtnZoomDown.setEnabled(mScrollView.canZoomFurtherDown());
+            mBtnZoomUp.setEnabled(mScrollView.canZoomFurtherUp());
+        }
     }
 
     public void cleanupOldTiles() {
