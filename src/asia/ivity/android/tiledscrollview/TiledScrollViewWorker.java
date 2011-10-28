@@ -40,7 +40,9 @@ import android.widget.ImageView;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.ref.SoftReference;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.concurrent.ConcurrentHashMap;
@@ -52,14 +54,26 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class TiledScrollViewWorker extends TwoDScrollView {
     static final int UPDATE_TILES = 123;
-//    static final int CLEANUP_OLD_TILES = 124;
+    //    static final int CLEANUP_OLD_TILES = 124;
     static final int FILL_TILES_DELAY = 200;
 
     private Animation mFadeInAnimation;
     private OnZoomLevelChangedListener onZoomLevelChangedListener = null;
+    private List<Marker> mMarkers = new ArrayList<Marker>();
+
+    private OnClickListener mOnMarkerOnClickListener;
+    private List<ImageView> mMarkerViews = new ArrayList<ImageView>();
+
+    public void setMarkerOnClickListener(OnClickListener mOnMarkerOnClickListener) {
+        this.mOnMarkerOnClickListener = mOnMarkerOnClickListener;
+    }
 
     public void setOnZoomLevelChangedListener(OnZoomLevelChangedListener listener) {
         this.onZoomLevelChangedListener = listener;
+    }
+
+    public void addMarker(int x, int y, String description) {
+        mMarkers.add(new Marker(x, y, description));
     }
 
     public enum ZoomLevel {
@@ -113,7 +127,7 @@ public class TiledScrollViewWorker extends TwoDScrollView {
 
     private FrameLayout mContainer;
     private static final String TAG = TiledScrollViewWorker.class.getSimpleName();
-//    private float mDensity;
+    //    private float mDensity;
     private Handler mHandler = new Handler() {
         @Override
         public void handleMessage(final Message msg) {
@@ -203,7 +217,6 @@ public class TiledScrollViewWorker extends TwoDScrollView {
     }
 
 
-
     @Override
     protected void onScrollChanged(int l, int t, int oldl, int oldt) {
         super.onScrollChanged(l, t, oldl, oldt);
@@ -221,6 +234,18 @@ public class TiledScrollViewWorker extends TwoDScrollView {
     private void fillTiles() throws IOException {
         Rect visible = new Rect();
         mContainer.getDrawingRect(visible);
+
+        for (ImageView iv : mMarkerViews) {
+            mContainer.removeView(iv);
+        }
+
+//        for (int i = 0; i < mContainer.getChildCount(); i++) {
+//            View x = mContainer.getChildAt(i);
+//            if (x.getTag() instanceof Marker) {
+//                mContainer.removeView(x);
+//                i--;
+//            }
+//        }
 
         final int left = visible.left + getScrollX();
         final int top = visible.top + getScrollY();
@@ -290,6 +315,34 @@ public class TiledScrollViewWorker extends TwoDScrollView {
                     // iv.startAnimation(mFadeInAnimation);
 
                     tiles.put(tile, new SoftReference<ImageView>(iv));
+                }
+            }
+
+            @Override
+            protected void onPostExecute(Void aVoid) {
+                if (mMarkerViews.isEmpty()) {
+                    Bitmap b = BitmapFactory.decodeResource(getContext().getResources(), R.drawable.ic_maps_indicator_current_position);
+                    for (Marker m : mMarkers) {
+                        Log.d(TAG, "Adding: " + m);
+                        FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+                        lp.leftMargin = m.getX() - (b.getWidth() / 2);
+                        lp.topMargin = m.getY() - (b.getHeight() / 2);
+                        lp.gravity = Gravity.TOP | Gravity.LEFT;
+
+                        ImageView iv = new ImageView(getContext());
+                        iv.setTag(m);
+                        iv.setImageResource(R.drawable.ic_maps_indicator_current_position);
+                        iv.setLayoutParams(lp);
+
+                        if (mOnMarkerOnClickListener != null) {
+                            iv.setOnClickListener(mOnMarkerOnClickListener);
+                        }
+
+                        mMarkerViews.add(iv);
+                    }
+                }
+                for (ImageView iv : mMarkerViews) {
+                    mContainer.addView(iv, iv.getLayoutParams());
                 }
             }
         }.execute((Void[]) null);
@@ -405,7 +458,7 @@ public class TiledScrollViewWorker extends TwoDScrollView {
     }
 
     private void changeZoomLevel(ZoomLevel next) {
-        if(next != mCurrentZoomLevel && mConfigurationSets.containsKey(next)) {
+        if (next != mCurrentZoomLevel && mConfigurationSets.containsKey(next)) {
             mCurrentZoomLevel = next;
             Log.d(TAG, "new zoom level: " + mCurrentZoomLevel);
 
@@ -427,12 +480,12 @@ public class TiledScrollViewWorker extends TwoDScrollView {
             Log.d(TAG, "2: " + w + ", " + h);
             Log.d(TAG, "3: " + newW + ", " + newH);
 
-            Log.d(TAG, "new sX: " + (int) x/w*newW);
-            Log.d(TAG, "new sY: " + (int) y/h*newH);
+            Log.d(TAG, "new sX: " + (int) x / w * newW);
+            Log.d(TAG, "new sY: " + (int) y / h * newH);
 
-            smoothScrollTo((int) (x / w * newW), (int) (y/h*newH));
+            smoothScrollTo((int) (x / w * newW), (int) (y / h * newH));
 
-            if(onZoomLevelChangedListener != null) {
+            if (onZoomLevelChangedListener != null) {
                 onZoomLevelChangedListener.onZoomLevelChanged(mCurrentZoomLevel);
             }
 
@@ -466,5 +519,39 @@ public class TiledScrollViewWorker extends TwoDScrollView {
 
     public void zoomUp() {
         changeZoomLevel(mCurrentZoomLevel.upLevel());
+    }
+
+    public class Marker {
+        private int x;
+        private int y;
+
+        public int getX() {
+            return x;
+        }
+
+        public int getY() {
+            return y;
+        }
+
+        public String getDescription() {
+            return description;
+        }
+
+        private String description;
+
+        public Marker(int x, int y, String description) {
+            this.x = x;
+            this.y = y;
+            this.description = description;
+        }
+
+        @Override
+        public String toString() {
+            return "Marker{" +
+                    "x=" + x +
+                    ", y=" + y +
+                    ", description='" + description + '\'' +
+                    '}';
+        }
     }
 }

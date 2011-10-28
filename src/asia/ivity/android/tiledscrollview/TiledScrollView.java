@@ -89,4 +89,12 @@ public class TiledScrollView extends FrameLayout {
     public void cleanupOldTiles() {
         mScrollView.cleanupOldTiles();
     }
+
+    public void addMarker(int x, int y, String description) {
+        mScrollView.addMarker(x, y, description);
+    }
+
+    public void setMarkerOnClickListener(OnClickListener listener) {
+        mScrollView.setMarkerOnClickListener(listener);
+    }
 }
