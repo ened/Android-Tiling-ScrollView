@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="asia.ivity.android.tiledscrollview.TiledScrollView">
+        <attr name="file_pattern" format="string" />
+        <attr name="tile_width" format="integer" />
+        <attr name="tile_height" format="integer" />
+        <attr name="image_width" format="integer" />
+        <attr name="image_height" format="integer" />
+    </declare-styleable>
+</resources>

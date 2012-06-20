@@ -59,3 +59,9 @@ Credits
 
 * Apples iOS CATiledLayer for inspiring this work
 * http://GORGES.us for developing and publishing a two dimensional ScrollView
+
+
+License
+=======
+
+This library is released under a BSD license. See the LICENSE file included with the distribution for details.
