@@ -8,13 +8,14 @@
         >
 
     <asia.ivity.android.tiledscrollview.TiledScrollView
+            android:id="@+id/tiledScrollView"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            app:file_pattern="tiger/crop_%col%_%row%.jpg"
-            app:tile_height="90"
-            app:tile_width="90"
-            app:image_width="1280"
-            app:image_height="1024"
+            app:file_pattern="tiger400/crop_%col%_%row%.png"
+            app:tile_height="100"
+            app:tile_width="100"
+            app:image_width="400"
+            app:image_height="300"
             />
 
 </LinearLayout>

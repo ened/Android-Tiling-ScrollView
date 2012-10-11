@@ -48,7 +48,7 @@ import java.util.Random;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * Tiled Scroll View. Similar to iOS's CATiledLayer.
+ * Tiled Scroll View worker class that handles loading and display of the pictures.
  *
  * @author Sebastian Roth <sebastian.roth@gmail.com>
  */
@@ -76,52 +76,19 @@ public class TiledScrollViewWorker extends TwoDScrollView {
         mMarkers.add(new Marker(x, y, description));
     }
 
-    public enum ZoomLevel {
-        DEFAULT,
-        LEVEL_1,
-        LEVEL_2;
+    TiledScrollView.ZoomLevel mCurrentZoomLevel = TiledScrollView.ZoomLevel.DEFAULT;
 
-        public ZoomLevel upLevel() {
-            switch (this) {
-                case DEFAULT:
-                    return LEVEL_1;
-                case LEVEL_1:
-                    return LEVEL_2;
-                case LEVEL_2:
-                    return LEVEL_2;
-            }
-
-            return this;
-        }
-
-        public ZoomLevel downLevel() {
-            switch (this) {
-                case DEFAULT:
-                    return DEFAULT;
-                case LEVEL_1:
-                    return DEFAULT;
-                case LEVEL_2:
-                    return LEVEL_1;
-            }
-
-            return this;
-        }
-    }
-
-
-    ZoomLevel mCurrentZoomLevel = ZoomLevel.DEFAULT;
-
-    Map<ZoomLevel, ConfigurationSet> mConfigurationSets = new HashMap<ZoomLevel, ConfigurationSet>();
+    Map<TiledScrollView.ZoomLevel, ConfigurationSet> mConfigurationSets = new HashMap<TiledScrollView.ZoomLevel, ConfigurationSet>();
 
     private ConfigurationSet getCurrentConfigurationSet() {
         if (mConfigurationSets.containsKey(mCurrentZoomLevel)) {
             return mConfigurationSets.get(mCurrentZoomLevel);
         }
 
-        return mConfigurationSets.get(ZoomLevel.DEFAULT);
+        return mConfigurationSets.get(TiledScrollView.ZoomLevel.DEFAULT);
     }
 
-    public void addConfigurationSet(ZoomLevel level, ConfigurationSet set) {
+    public void addConfigurationSet(TiledScrollView.ZoomLevel level, ConfigurationSet set) {
         mConfigurationSets.put(level, set);
     }
 
@@ -180,7 +147,7 @@ public class TiledScrollViewWorker extends TwoDScrollView {
             throw new IllegalArgumentException("Please set all attributes correctly!");
         }
 
-        mConfigurationSets.put(ZoomLevel.DEFAULT,
+        mConfigurationSets.put(TiledScrollView.ZoomLevel.DEFAULT,
                 new ConfigurationSet(filePattern, tileWidth, tileHeight, imageWidth, imageHeight));
     }
 
@@ -424,7 +391,7 @@ public class TiledScrollViewWorker extends TwoDScrollView {
                     // We're in a pinch so decide if we need to change
                     // the zoom level.
                     float newSeparation = calculateSeparation(e);
-                    ZoomLevel next = mCurrentZoomLevel;
+                    TiledScrollView.ZoomLevel next = mCurrentZoomLevel;
                     if (newSeparation - mOrigSeparation > ZOOMJUMP) {
                         Log.d(TAG, "Zoom In!");
 
@@ -457,7 +424,7 @@ public class TiledScrollViewWorker extends TwoDScrollView {
         return super.onTouchEvent(e);
     }
 
-    private void changeZoomLevel(ZoomLevel next) {
+    private void changeZoomLevel(TiledScrollView.ZoomLevel next) {
         if (next != mCurrentZoomLevel && mConfigurationSets.containsKey(next)) {
             mCurrentZoomLevel = next;
             Log.d(TAG, "new zoom level: " + mCurrentZoomLevel);

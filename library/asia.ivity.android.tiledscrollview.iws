@@ -13,53 +13,451 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8b22620-a48a-4752-a72a-2eb64f6b1a3c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ant.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proguard.cfg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../project.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../res/anim/fadein.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../res/anim/fadeout.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../res/drawable-hdpi/btn_zoom_down_disabled.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../res/drawable-hdpi/btn_zoom_down_disabled_focused.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../res/drawable-hdpi/btn_zoom_down_normal.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../res/drawable-hdpi/btn_zoom_down_pressed.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../res/drawable-hdpi/btn_zoom_down_selected.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../res/drawable-hdpi/btn_zoom_up_disabled.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../res/drawable-hdpi/btn_zoom_up_disabled_focused.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../res/drawable-hdpi/btn_zoom_up_normal.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../res/drawable-hdpi/btn_zoom_up_pressed.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../res/drawable-hdpi/btn_zoom_up_selected.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../res/drawable-hdpi/ic_maps_indicator_current_position.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../res/drawable-mdpi/btn_zoom_down_disabled.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../res/drawable-mdpi/btn_zoom_down_disabled_focused.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../res/drawable-mdpi/btn_zoom_down_normal.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../res/drawable-mdpi/btn_zoom_down_pressed.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../res/drawable-mdpi/btn_zoom_down_selected.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../res/drawable-mdpi/btn_zoom_up_disabled.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../res/drawable-mdpi/btn_zoom_up_disabled_focused.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../res/drawable-mdpi/btn_zoom_up_normal.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../res/drawable-mdpi/btn_zoom_up_pressed.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../res/drawable-mdpi/btn_zoom_up_selected.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../res/drawable/btn_zoom_down.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../res/drawable/btn_zoom_up.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../res/layout/ll_tiledscroll_view_zoom_buttons.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../res/values/attrs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../res/values/strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../src/asia/ivity/android/tiledscrollview/ConfigurationSet.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../src/asia/ivity/android/tiledscrollview/OnZoomLevelChangedListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../src/asia/ivity/android/tiledscrollview/Tile.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../src/asia/ivity/android/tiledscrollview/TiledScrollView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../src/asia/ivity/android/tiledscrollview/TiledScrollViewWorker.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../src/asia/ivity/android/tiledscrollview/TwoDScrollView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../src/asia/ivity/android/tiledscrollview/ZoomingFrameLayout.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sample/AndroidManifest.xml" afterPath="$PROJECT_DIR$/../sample/AndroidManifest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_0_0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_0_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_0_10.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_0_11.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_0_12.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_0_13.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_0_14.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_0_15.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_0_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_0_3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_0_4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_0_5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_0_6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_0_7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_0_8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_0_9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_10_0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_10_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_10_10.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_10_11.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_10_12.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_10_13.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_10_14.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_10_15.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_10_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_10_3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_10_4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_10_5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_10_6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_10_7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_10_8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_10_9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_11_0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_11_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_11_10.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_11_11.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_11_12.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_11_13.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_11_14.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_11_15.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_11_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_11_3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_11_4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_11_5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_11_6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_11_7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_11_8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_11_9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_1_0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_1_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_1_10.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_1_11.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_1_12.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_1_13.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_1_14.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_1_15.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_1_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_1_3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_1_4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_1_5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_1_6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_1_7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_1_8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_1_9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_2_0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_2_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_2_10.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_2_11.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_2_12.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_2_13.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_2_14.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_2_15.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_2_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_2_3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_2_4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_2_5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_2_6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_2_7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_2_8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_2_9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_3_0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_3_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_3_10.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_3_11.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_3_12.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_3_13.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_3_14.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_3_15.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_3_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_3_3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_3_4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_3_5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_3_6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_3_7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_3_8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_3_9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_4_0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_4_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_4_10.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_4_11.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_4_12.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_4_13.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_4_14.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_4_15.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_4_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_4_3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_4_4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_4_5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_4_6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_4_7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_4_8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_4_9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_5_0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_5_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_5_10.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_5_11.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_5_12.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_5_13.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_5_14.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_5_15.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_5_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_5_3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_5_4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_5_5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_5_6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_5_7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_5_8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_5_9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_6_0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_6_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_6_10.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_6_11.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_6_12.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_6_13.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_6_14.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_6_15.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_6_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_6_3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_6_4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_6_5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_6_6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_6_7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_6_8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_6_9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_7_0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_7_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_7_10.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_7_11.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_7_12.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_7_13.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_7_14.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_7_15.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_7_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_7_3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_7_4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_7_5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_7_6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_7_7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_7_8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_7_9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_8_0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_8_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_8_10.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_8_11.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_8_12.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_8_13.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_8_14.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_8_15.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_8_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_8_3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_8_4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_8_5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_8_6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_8_7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_8_8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_8_9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_9_0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_9_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_9_10.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_9_11.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_9_12.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_9_13.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_9_14.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_9_15.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_9_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_9_3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_9_4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_9_5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_9_6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_9_7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_9_8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger1600/crop_9_9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger400/crop_0_0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger400/crop_0_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger400/crop_0_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger400/crop_0_3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger400/crop_1_0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger400/crop_1_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger400/crop_1_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger400/crop_1_3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger400/crop_2_0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger400/crop_2_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger400/crop_2_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger400/crop_2_3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_0_0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_0_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_0_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_0_3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_0_4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_0_5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_0_6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_0_7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_1_0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_1_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_1_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_1_3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_1_4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_1_5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_1_6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_1_7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_2_0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_2_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_2_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_2_3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_2_4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_2_5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_2_6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_2_7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_3_0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_3_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_3_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_3_3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_3_4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_3_5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_3_6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_3_7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_4_0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_4_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_4_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_4_3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_4_4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_4_5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_4_6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_4_7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_5_0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_5_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_5_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_5_3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_5_4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_5_5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_5_6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../sample/assets/tiger800/crop_5_7.png" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_0_0.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_0_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_0_10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_0_11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_0_12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_0_13.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_0_14.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_0_2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_0_3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_0_4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_0_5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_0_6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_0_7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_0_8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_0_9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_10_0.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_10_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_10_10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_10_11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_10_12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_10_13.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_10_14.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_10_2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_10_3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_10_4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_10_5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_10_6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_10_7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_10_8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_10_9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_11_0.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_11_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_11_10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_11_11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_11_12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_11_13.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_11_14.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_11_2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_11_3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_11_4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_11_5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_11_6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_11_7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_11_8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_11_9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_1_0.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_1_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_1_10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_1_11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_1_12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_1_13.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_1_14.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_1_2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_1_3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_1_4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_1_5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_1_6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_1_7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_1_8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_1_9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_2_0.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_2_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_2_10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_2_11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_2_12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_2_13.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_2_14.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_2_2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_2_3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_2_4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_2_5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_2_6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_2_7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_2_8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_2_9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_3_0.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_3_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_3_10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_3_11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_3_12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_3_13.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_3_14.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_3_2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_3_3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_3_4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_3_5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_3_6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_3_7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_3_8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_3_9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_4_0.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_4_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_4_10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_4_11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_4_12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_4_13.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_4_14.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_4_2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_4_3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_4_4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_4_5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_4_6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_4_7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_4_8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_4_9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_5_0.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_5_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_5_10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_5_11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_5_12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_5_13.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_5_14.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_5_2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_5_3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_5_4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_5_5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_5_6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_5_7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_5_8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_5_9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_6_0.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_6_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_6_10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_6_11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_6_12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_6_13.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_6_14.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_6_2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_6_3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_6_4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_6_5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_6_6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_6_7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_6_8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_6_9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_7_0.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_7_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_7_10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_7_11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_7_12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_7_13.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_7_14.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_7_2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_7_3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_7_4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_7_5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_7_6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_7_7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_7_8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_7_9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_8_0.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_8_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_8_10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_8_11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_8_12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_8_13.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_8_14.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_8_2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_8_3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_8_4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_8_5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_8_6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_8_7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_8_8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_8_9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_9_0.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_9_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_9_10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_9_11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_9_12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_9_13.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_9_14.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_9_2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_9_3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_9_4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_9_5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_9_6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_9_7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_9_8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sample/assets/tiger/crop_9_9.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../README.md" afterPath="$PROJECT_DIR$/../README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asia.ivity.android.tiledscrollview.ipr" afterPath="$PROJECT_DIR$/asia.ivity.android.tiledscrollview.ipr" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asia.ivity.android.tiledscrollview.iws" afterPath="$PROJECT_DIR$/asia.ivity.android.tiledscrollview.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.properties" afterPath="$PROJECT_DIR$/project.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/asia/ivity/android/tiledscrollview/OnZoomLevelChangedListener.java" afterPath="$PROJECT_DIR$/src/asia/ivity/android/tiledscrollview/OnZoomLevelChangedListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/asia/ivity/android/tiledscrollview/TiledScrollView.java" afterPath="$PROJECT_DIR$/src/asia/ivity/android/tiledscrollview/TiledScrollView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/asia/ivity/android/tiledscrollview/TiledScrollViewWorker.java" afterPath="$PROJECT_DIR$/src/asia/ivity/android/tiledscrollview/TiledScrollViewWorker.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sample/res/layout/main.xml" afterPath="$PROJECT_DIR$/../sample/res/layout/main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sample/res/values/strings.xml" afterPath="$PROJECT_DIR$/../sample/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sample/src/asia/ivity/android/tiledscrollview/TiledScrollViewSample.java" afterPath="$PROJECT_DIR$/../sample/src/asia/ivity/android/tiledscrollview/TiledScrollViewSample.java" />
     </list>
     <ignored path="asia.ivity.android.tiledscrollview.iws" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path="asia.ivity.android.tiledscrollview.ipr" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,19 +512,62 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../sample/res/layout/main.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="36" selection-start="156" selection-end="156" vertical-scroll-proportion="0.07772021">
+            <state line="16" column="33" selection-start="693" selection-end="693" vertical-scroll-proportion="-4.3636365">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TiledScrollViewSample.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="TiledScrollView.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/asia/ivity/android/tiledscrollview/TiledScrollView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="23" selection-start="558" selection-end="558" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#1929#2089#0" expanded="true" />
+                <element signature="e#2078#2079#0" expanded="true" />
+                <element signature="e#2402#2556#0" expanded="true" />
+                <element signature="e#2545#2546#0" expanded="true" />
+                <element signature="e#2597#2749#0" expanded="true" />
+                <element signature="e#2738#2739#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tile.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/asia/ivity/android/tiledscrollview/Tile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="6" selection-start="90" selection-end="90" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConfigurationSet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/asia/ivity/android/tiledscrollview/ConfigurationSet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="76" selection-start="194" selection-end="194" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TiledScrollViewSample.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../sample/src/asia/ivity/android/tiledscrollview/TiledScrollViewSample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0">
+            <state line="17" column="47" selection-start="761" selection-end="761" vertical-scroll-proportion="0.41450778">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TiledScrollViewWorker.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/asia/ivity/android/tiledscrollview/TiledScrollViewWorker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="50" column="83" selection-start="1641" selection-end="1641" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -164,9 +605,12 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/../sample/src/asia/ivity/android/tiledscrollview/TiledScrollViewSample.java" />
         <option value="$PROJECT_DIR$/../sample/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/../sample/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/src/asia/ivity/android/tiledscrollview/TiledScrollView.java" />
+        <option value="$PROJECT_DIR$/src/asia/ivity/android/tiledscrollview/TiledScrollViewWorker.java" />
+        <option value="$PROJECT_DIR$/../sample/res/layout/main.xml" />
+        <option value="$PROJECT_DIR$/../sample/src/asia/ivity/android/tiledscrollview/TiledScrollViewSample.java" />
       </list>
     </option>
   </component>
@@ -186,7 +630,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="0" />
+    <option name="STATE" value="2" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
@@ -201,12 +645,12 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
+      <pane id="PackagesPane">
+        <subPane>
           <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asia.ivity.android.tiledscrollview" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -239,11 +683,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tiledscrollview" />
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -253,40 +693,27 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sample" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="asia.ivity.android.tiledscrollview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
+              <option name="myItemId" value="library" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
@@ -299,8 +726,16 @@
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="A4-Tablet" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="asia.ivity.android.tiledscrollview.TiledScrollView" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../sample/assets" />
+    </key>
   </component>
   <component name="RunManager" selected="Android Application.Sample">
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -449,6 +884,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+      <changelist id="f8b22620-a48a-4752-a72a-2eb64f6b1a3c" name="Default" comment="" />
       <created>1349921947642</created>
       <updated>1349921947642</updated>
     </task>
@@ -456,30 +892,30 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1680" height="1024" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32986537" sideWeight="0.31782946" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32890365" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2757353" sideWeight="0.6710963" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.68217057" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.68217057" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1744186" sideWeight="0.6710963" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32890365" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1740196" sideWeight="0.6710963" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -548,13 +984,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../sample/src/asia/ivity/android/tiledscrollview/TiledScrollViewSample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../sample/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="45" selection-start="404" selection-end="404" vertical-scroll-proportion="0.0">
@@ -569,9 +998,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/asia/ivity/android/tiledscrollview/TiledScrollViewWorker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="83" selection-start="1641" selection-end="1641" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/asia/ivity/android/tiledscrollview/TiledScrollView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="23" selection-start="558" selection-end="558" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1929#2089#0" expanded="true" />
+            <element signature="e#2078#2079#0" expanded="true" />
+            <element signature="e#2402#2556#0" expanded="true" />
+            <element signature="e#2545#2546#0" expanded="true" />
+            <element signature="e#2597#2749#0" expanded="true" />
+            <element signature="e#2738#2739#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/asia/ivity/android/tiledscrollview/Tile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="6" selection-start="90" selection-end="90" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/asia/ivity/android/tiledscrollview/ConfigurationSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="76" selection-start="194" selection-end="194" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../sample/res/layout/main.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="36" selection-start="156" selection-end="156" vertical-scroll-proportion="0.07772021">
+        <state line="16" column="33" selection-start="693" selection-end="693" vertical-scroll-proportion="-4.3636365">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sample/src/asia/ivity/android/tiledscrollview/TiledScrollViewSample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="47" selection-start="761" selection-end="761" vertical-scroll-proportion="0.41450778">
           <folding />
         </state>
       </provider>

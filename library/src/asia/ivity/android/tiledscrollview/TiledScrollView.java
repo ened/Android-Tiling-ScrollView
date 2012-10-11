@@ -9,7 +9,10 @@ import android.widget.FrameLayout;
 import android.widget.ImageButton;
 
 /**
- * DESCRIPTION
+ * Tiled scroll view main class.
+ * <p/>
+ * This class supports scrolling through a huge picture based on image tiles.
+ * Most of the real "work" is done in the {@link TiledScrollViewWorker} class.
  *
  * @author Sebastian Roth <sebastian.roth@gmail.com>
  */
@@ -18,6 +21,38 @@ public class TiledScrollView extends FrameLayout {
     private TiledScrollViewWorker mScrollView;
     private ImageButton mBtnZoomDown;
     private ImageButton mBtnZoomUp;
+
+    public enum ZoomLevel {
+        DEFAULT,
+        LEVEL_1,
+        LEVEL_2;
+
+        public ZoomLevel upLevel() {
+            switch (this) {
+                case DEFAULT:
+                    return LEVEL_1;
+                case LEVEL_1:
+                    return LEVEL_2;
+                case LEVEL_2:
+                    return LEVEL_2;
+            }
+
+            return this;
+        }
+
+        public ZoomLevel downLevel() {
+            switch (this) {
+                case DEFAULT:
+                    return DEFAULT;
+                case LEVEL_1:
+                    return DEFAULT;
+                case LEVEL_2:
+                    return LEVEL_1;
+            }
+
+            return this;
+        }
+    }
 
     public TiledScrollView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -36,7 +71,7 @@ public class TiledScrollView extends FrameLayout {
 
         mScrollView = new TiledScrollViewWorker(getContext(), attrs);
         mScrollView.setOnZoomLevelChangedListener(new OnZoomLevelChangedListener() {
-            public void onZoomLevelChanged(TiledScrollViewWorker.ZoomLevel newLevel) {
+            public void onZoomLevelChanged(ZoomLevel newLevel) {
                 updateZoomButtons();
             }
         });
@@ -68,7 +103,7 @@ public class TiledScrollView extends FrameLayout {
         updateZoomButtons();
     }
 
-    public void addConfigurationSet(TiledScrollViewWorker.ZoomLevel level, ConfigurationSet set) {
+    public void addConfigurationSet(ZoomLevel level, ConfigurationSet set) {
         mScrollView.addConfigurationSet(level, set);
 
         updateZoomButtons();

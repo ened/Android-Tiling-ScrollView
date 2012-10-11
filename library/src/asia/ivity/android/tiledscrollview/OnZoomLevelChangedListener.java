@@ -6,5 +6,5 @@ package asia.ivity.android.tiledscrollview;
  * @author Sebastian Roth <sebastian.roth@gmail.com>
  */
 public interface OnZoomLevelChangedListener {
-    void onZoomLevelChanged(TiledScrollViewWorker.ZoomLevel newLevel);
+    void onZoomLevelChanged(TiledScrollView.ZoomLevel newLevel);
 }

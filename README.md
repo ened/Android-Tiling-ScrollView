@@ -59,7 +59,12 @@ Credits
 
 * Apples iOS CATiledLayer for inspiring this work
 * http://GORGES.us for developing and publishing a two dimensional ScrollView
+* http://www.animalspedia.com/wallpaper/The-Siege---Siberian-Tiger/ for providing a nice sample picture
 
+Apps using this library
+=======================
+
+* https://play.google.com/store/apps/details?id=asia.ivity.qifu.android.map
 
 License
 =======
