@@ -16,6 +16,7 @@
             app:tile_width="100"
             app:image_width="400"
             app:image_height="300"
+            app:zoom_buttons="false"
             />
 
 </LinearLayout>

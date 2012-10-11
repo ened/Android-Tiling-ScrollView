@@ -1,6 +1,7 @@
 package asia.ivity.android.tiledscrollview;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -21,6 +22,7 @@ public class TiledScrollView extends FrameLayout {
     private TiledScrollViewWorker mScrollView;
     private ImageButton mBtnZoomDown;
     private ImageButton mBtnZoomUp;
+    private boolean mZoomButtonsEnabled = true;
 
     public enum ZoomLevel {
         DEFAULT,
@@ -78,29 +80,35 @@ public class TiledScrollView extends FrameLayout {
 
         addView(mScrollView);
 
-        View btns = lf.inflate(R.layout.ll_tiledscroll_view_zoom_buttons, this, false);
+        final TypedArray a = getContext().obtainStyledAttributes(attrs,
+                R.styleable.asia_ivity_android_tiledscrollview_TiledScrollView);
+        mZoomButtonsEnabled = a.getBoolean(R.styleable.asia_ivity_android_tiledscrollview_TiledScrollView_zoom_buttons, true);
 
-        mBtnZoomDown = (ImageButton) btns.findViewById(R.id.btn_zoom_down);
-        mBtnZoomUp = (ImageButton) btns.findViewById(R.id.btn_zoom_up);
+        if (mZoomButtonsEnabled) {
+            View btns = lf.inflate(R.layout.ll_tiledscroll_view_zoom_buttons, this, false);
 
-        mBtnZoomDown.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mScrollView.zoomDown();
-            }
-        });
-        mBtnZoomUp.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mScrollView.zoomUp();
-            }
-        });
+            mBtnZoomDown = (ImageButton) btns.findViewById(R.id.btn_zoom_down);
+            mBtnZoomUp = (ImageButton) btns.findViewById(R.id.btn_zoom_up);
 
-        LayoutParams params = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-        params.gravity = Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL;
-        addView(btns, params);
+            mBtnZoomDown.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    mScrollView.zoomDown();
+                }
+            });
+            mBtnZoomUp.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    mScrollView.zoomUp();
+                }
+            });
 
-        updateZoomButtons();
+            LayoutParams params = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+            params.gravity = Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL;
+            addView(btns, params);
+
+            updateZoomButtons();
+        }
     }
 
     public void addConfigurationSet(ZoomLevel level, ConfigurationSet set) {
@@ -110,14 +118,16 @@ public class TiledScrollView extends FrameLayout {
     }
 
     private void updateZoomButtons() {
-        if (!mScrollView.canZoomFurtherDown() && !mScrollView.canZoomFurtherUp()) {
-            mBtnZoomDown.setVisibility(GONE);
-            mBtnZoomUp.setVisibility(GONE);
-        } else {
-            mBtnZoomDown.setVisibility(VISIBLE);
-            mBtnZoomUp.setVisibility(VISIBLE);
-            mBtnZoomDown.setEnabled(mScrollView.canZoomFurtherDown());
-            mBtnZoomUp.setEnabled(mScrollView.canZoomFurtherUp());
+        if (mZoomButtonsEnabled) {
+            if (!mScrollView.canZoomFurtherDown() && !mScrollView.canZoomFurtherUp()) {
+                mBtnZoomDown.setVisibility(GONE);
+                mBtnZoomUp.setVisibility(GONE);
+            } else {
+                mBtnZoomDown.setVisibility(VISIBLE);
+                mBtnZoomUp.setVisibility(VISIBLE);
+                mBtnZoomDown.setEnabled(mScrollView.canZoomFurtherDown());
+                mBtnZoomUp.setEnabled(mScrollView.canZoomFurtherUp());
+            }
         }
     }
 

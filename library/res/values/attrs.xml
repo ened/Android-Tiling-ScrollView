@@ -6,5 +6,6 @@
         <attr name="tile_height" format="integer" />
         <attr name="image_width" format="integer" />
         <attr name="image_height" format="integer" />
+        <attr name="zoom_buttons" format="boolean" />
     </declare-styleable>
 </resources>
