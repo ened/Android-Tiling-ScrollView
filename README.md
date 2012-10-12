@@ -78,7 +78,7 @@ The plugin is available in the maven central repository.
 <dependency>
   <groupId>asia.ivity</groupId>
   <artifactId>tiledscrollview</artifactId>
-  <version>1.0</version>
+  <version>1.1.1</version>
   <type>apklib</type>
 </dependency>
 ```
