@@ -9,8 +9,8 @@
 		<version>7</version>
 	</parent>
 
-	<groupId>asia.ivity.tiledscrollview</groupId>
-	<artifactId>parent</artifactId>
+	<groupId>asia.ivity</groupId>
+	<artifactId>tiledscrollview.parent</artifactId>
 	<packaging>pom</packaging>
 	<version>1.0</version>
 
