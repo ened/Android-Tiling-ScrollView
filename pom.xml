@@ -12,7 +12,7 @@
 	<groupId>asia.ivity</groupId>
 	<artifactId>tiledscrollview.parent</artifactId>
 	<packaging>pom</packaging>
-	<version>1.1-SNAPSHOT</version>
+	<version>1.1.1</version>
 
 	<name>TiledScrollView (Parent)</name>
 	<description>Android library to display large images (like Metro maps, paintings) while keeping the memory consumption as low as possible.</description>
