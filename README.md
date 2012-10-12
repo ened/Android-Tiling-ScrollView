@@ -69,6 +69,20 @@ Apps using this library
 * https://play.google.com/store/apps/details?id=asia.ivity.qifu.android.map
 * Send a pull request to add your App.
 
+Maven
+=====
+
+The plugin is available in the maven central repository.
+
+``` xml
+<dependency>
+  <groupId>asia.ivity</groupId>
+  <artifactId>tiledscrollview</artifactId>
+  <version>1.0</version>
+  <type>apklib</type>
+</dependency>
+```
+
 License
 =======
 
