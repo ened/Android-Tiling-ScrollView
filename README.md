@@ -1,3 +1,5 @@
+*Project is not maintained right now. Please see the note at the end of this file.*
+
 Introduction
 ============
 
@@ -87,3 +89,8 @@ License
 =======
 
 This library is released under a BSD license. See the LICENSE file included with the distribution for details.
+
+Not for you?
+============
+
+Check out https://github.com/moagrius/TileView, which is a up to date Tiling library which includes many features.
